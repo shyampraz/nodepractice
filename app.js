@@ -6,5 +6,5 @@ var thing= function() {
 };
 
 thing();
-
+//small change
 setTimeout(thing,2000);
