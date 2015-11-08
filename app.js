@@ -1,4 +1,5 @@
-var tiffen = require("./dishes");
+var vidh= require("./vidhya");
+var shym= require("./shyam");
 
-tiffen.dosa();
-tiffen.idli();
+vidh.printfav();
+shym.printfav();

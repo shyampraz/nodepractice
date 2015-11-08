@@ -4,13 +4,7 @@
 
 module.exports = {
 
-    dosa:function(){
-        console.log("dosa: 35rs");
-    },
+    favdish: ""
 
-    idli: function(){
-        console.log("idli: 25rs");
-    }
-
-}
+};
 
