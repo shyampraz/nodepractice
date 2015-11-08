@@ -2,9 +2,9 @@
  * Created by Shyam Prasad on 11/8/2015.
  */
 
-module.exports = {
-
-    favdish: ""
-
+module.exports = function (){
+   return {
+       favdish: ""
+   }
 };
 

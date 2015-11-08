@@ -4,10 +4,11 @@
 
 var myfav = require("./dishes");
 
-myfav.favdish="idli";
+var myonlyfav = myfav();
 
+myonlyfav.favdish="idli";
 function printfav(){
-    console.log("vidhya's favorite dish is: ",myfav.favdish);
+    console.log("vidhya's favorite dish is: ",myonlyfav.favdish);
 }
 
 module.exports.printfav=printfav;
