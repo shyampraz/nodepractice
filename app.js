@@ -1,10 +1,14 @@
+function placeorder(ordernum){
+    console.log("placed order ",ordernum);
+    cookandwait(function(){
+        console.log("delivered order ",ordernum);
+    });
+}
+function cookandwait(deliver){
 
-var thing= function() {
+    setTimeout(deliver,5000);
+}
 
-    console.log("Eat bread");
-
-};
-
-thing();
-//small change
-setTimeout(thing,2000);
+placeorder(5);
+placeorder(4);
+placeorder(3);
