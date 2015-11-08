@@ -1,5 +1,4 @@
-var vidh= require("./vidhya");
-var shym= require("./shyam");
+var fs= require("fs");
 
-vidh.printfav();
-shym.printfav();
+fs.writeFileSync("file.txt","some random input string");
+console.log(fs.readFileSync("file.txt").toString());
