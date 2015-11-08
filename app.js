@@ -1,14 +1,16 @@
-function placeorder(ordernum){
-    console.log("placed order ",ordernum);
-    cookandwait(function(){
-        console.log("delivered order ",ordernum);
-    });
-}
-function cookandwait(deliver){
+var goolibib = {
 
-    setTimeout(deliver,5000);
+    check: function(){
+        console.log("Goolibib is a company");
+        console.log(this === goolibib);
+    }
 }
 
-placeorder(5);
-placeorder(4);
-placeorder(3);
+function check(){
+    console.log("Microsoft is a bigger company");
+    console.log(this === global);
+}
+
+goolibib.check();
+check();
+
