@@ -3,26 +3,21 @@
  */
 var http = require("http");
 var fs= require("fs");
+var conn=require("connect");
+
+var app= conn();
 
 
-function set404(response){
-
-    response.write("404: webpage not found");
-    response.end();
-
+function homepage(request,response){
+    fs.createReadStream("./index.html").pipe(response);
 }
 
-function onRequest(request,response){
-
-    if(request.method == "GET" && request.url == "/") {
-        console.log("Server connected to client");
-        //response.writeHead(200,{"content-type":"text/plain"});
-        fs.createReadStream("./index.html").pipe(response);
-    }else{
-        set404(response);
-    }
-
+function profile(request,response){
+    fs.createReadStream("./profile.html").pipe(response);
 }
 
-http.createServer(onRequest).listen(8888);
+app.use("/home",homepage);
+app.use("/profile",profile);
+
+http.createServer(app).listen(8888);
 console.log("server running");
