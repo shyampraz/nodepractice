@@ -1,9 +1,6 @@
-var path= require("path");
+console.log(__dirname);
+console.log(__filename);
 
-var webhome = "Desktoo/Shyam//index.txt";
-var webaddr = "Desktop/Shyam/addr.txt";
-
-console.log(path.normalize(webhome));
-console.log(path.dirname(webaddr));
-console.log(path.extname(webaddr));
-console.log(path.basename(webaddr));
+setInterval(function(){
+    console.log("loop");
+},3000);
