@@ -1,4 +1,9 @@
-var fs= require("fs");
+var path= require("path");
 
-fs.writeFileSync("file.txt","some random input string");
-console.log(fs.readFileSync("file.txt").toString());
+var webhome = "Desktoo/Shyam//index.txt";
+var webaddr = "Desktop/Shyam/addr.txt";
+
+console.log(path.normalize(webhome));
+console.log(path.dirname(webaddr));
+console.log(path.extname(webaddr));
+console.log(path.basename(webaddr));
